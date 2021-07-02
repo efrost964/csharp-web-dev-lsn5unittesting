@@ -6,7 +6,12 @@ namespace CarTests
     [TestClass]
     public class CarTests
     {
-        Car test_car = new Car("Toyota", "Prius", 10, 50);
+        Car test_car;
+        [TestInitialize]
+        public void CreatCarObject()
+        {
+            test_car = new Car("Toyota", "Prius", 10, 50);
+        }
         //[TestMethod]
         //public void EmptyTest()
         //{
